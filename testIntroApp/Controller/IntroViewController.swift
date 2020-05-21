@@ -26,7 +26,7 @@ class IntroViewController: UIViewController,UIScrollViewDelegate {
         scrollView.isPagingEnabled = true
         setUpScroll()
         
-        //Lottie
+        //アニメーション
         for count in 0...4{
             //アニメーションのインスタンス化
             let animationView = AnimationView()
@@ -54,10 +54,10 @@ class IntroViewController: UIViewController,UIScrollViewDelegate {
     //スクロールしてコンテンツを切り替える
     func setUpScroll(){
         scrollView.delegate = self
-        //コンテンツサイズを決める
+        //コンテンツサイズを決める。表示したい画面数に合わせてwidthを変える。
         scrollView.contentSize = CGSize(width: view.frame.size.width * 5, height: view.frame.size.height)
         
-        //5回分のラベルをつける
+        //ラベル
         for count in 0...4{
             let onboardLabel = UILabel(frame: CGRect(x: CGFloat(count) * view.frame.size.width, y: view.frame.size.height / 3, width: scrollView.frame.size.width, height: scrollView.frame.size.height))
             
@@ -66,7 +66,6 @@ class IntroViewController: UIViewController,UIScrollViewDelegate {
             onboardLabel.text = onboardStringArray[count]
             //scrollViewの上に、onboardLabelを表示する
             scrollView.addSubview(onboardLabel)
-            
         }
         
     }
