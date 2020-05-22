@@ -1,5 +1,5 @@
 //
-//  Page1ViewController.swift
+//  Page2ViewController.swift
 //  testIntroApp
 //
 //  Created by Kazuki Harada on 2020/05/21.
@@ -9,7 +9,7 @@
 import UIKit
 import SegementSlide
 
-class Page1ViewController: UITableViewController,SegementSlideContentScrollViewDelegate,XMLParserDelegate {
+class Page5ViewController: UITableViewController,SegementSlideContentScrollViewDelegate,XMLParserDelegate {
     
     //XMLParserをインスタンス化する
     var parser = XMLParser()
@@ -25,8 +25,8 @@ class Page1ViewController: UITableViewController,SegementSlideContentScrollViewD
 
         //背景に画像を入れる
         tableView.backgroundColor = .clear
-        //画像"0"をTableViewの下に置く
-        let image = UIImage(named: "0")
+        //画像"5"をTableViewの下に置く
+        let image = UIImage(named: "5")
         let imageView = UIImageView()
         imageView.frame = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: tableView.frame.size.height)
         //画像を反映させる
@@ -142,5 +142,6 @@ class Page1ViewController: UITableViewController,SegementSlideContentScrollViewD
         self.tableView.reloadData()
     }
 }
+
 
 
